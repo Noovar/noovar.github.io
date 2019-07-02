@@ -225,3 +225,20 @@ function openZul(evt, zulName) {
   document.getElementById(zulName).style.display = "block";
   evt.currentTarget.className += " w3-redzul";
 }
+
+
+
+
+function openMhd(evt, mhdName) {
+  var i, x, tablinkmhd;
+  x = document.getElementsByClassName("mhd");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinkmhd = document.getElementsByClassName("tablinkmhd");
+  for (i = 0; i < x.length; i++) {
+    tablinkmhd[i].className = tablinkmhd[i].className.replace(" w3-redmhd", "");
+  }
+  document.getElementById(mhdName).style.display = "block";
+  evt.currentTarget.className += " w3-redmhd";
+}
